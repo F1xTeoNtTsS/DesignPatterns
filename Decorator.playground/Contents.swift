@@ -76,9 +76,12 @@ var knightVasya: Knight = DefaultKnight()
 knightVasya.equipment()
 knightVasya.totalPower()
 
-knightVasya = Underwear(knight: knightVasya)
-knightVasya = Armor(knight: knightVasya)
-knightVasya = Weapon(knight: knightVasya)
+knightVasya = Weapon(knight: Armor(knight: Underwear(knight: knightVasya)))
+
+// or
+// knightVasya = Underwear(knight: knightVasya)
+// knightVasya = Armor(knight: knightVasya)
+// knightVasya = Weapon(knight: knightVasya)
 
 knightVasya.equipment()
 knightVasya.totalPower()
